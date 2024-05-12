@@ -8,43 +8,43 @@
     android:orientation="vertical"
     android:padding="16dp"
     android:background="@drawable/noteappbgnew"
-    tools:context=".AddNotesActivity">
+    tools:context=".UpdateNoteActivity">
 
     <TextView
-        android:id="@+id/addNoteHeading"
+        android:id="@+id/editNoteHeading"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_marginTop="16dp"
         android:fontFamily="@font/poppins"
-        android:text="Add Note"
+        android:text="Edit Note"
         android:textColor="@color/orange"
         android:textSize="24dp" />
 
     <ImageView
-        android:id="@+id/saveButton"
+        android:id="@+id/updatesaveButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/baseline_done_24"
         android:layout_alignParentEnd="true"
-        android:layout_alignTop="@+id/addNoteHeading"
+        android:layout_alignTop="@+id/editNoteHeading"
         android:layout_marginEnd="6dp"/>
 
     <EditText
-        android:id="@+id/titleEditText"
+        android:id="@+id/updatetitleEditText"
         android:layout_width="wrap_content"
         android:layout_height="68dp"
         android:hint="Enter the title"
         android:padding="12dp"
         android:textSize="20dp"
-        android:layout_below="@+id/addNoteHeading"
+        android:layout_below="@+id/editNoteHeading"
         android:background="@drawable/orange_border"
         android:layout_margin="16dp"
         android:maxLines="1"
         android:fontFamily="@font/poppins" />
 
     <EditText
-        android:id="@+id/contentEditText"
+        android:id="@+id/updatecontentEditText"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:hint="Enter the description"
@@ -53,7 +53,7 @@
         android:textSize="18sp"
         android:fontFamily="@font/poppins"
         android:background="@drawable/orange_border"
-        android:layout_below="@+id/titleEditText"
+        android:layout_below="@+id/updatetitleEditText"
         android:layout_marginTop="12dp"/>
 
 

@@ -1,5 +1,6 @@
 package com.example.mad_lab_04
 
+import android.app.Activity
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
@@ -23,6 +24,9 @@ class AddNotesActivity : AppCompatActivity() {
             val content = binding.contentEditText.text.toString()
             val note = Note(0, title, content)
             db.insertNote(note)
+
+            //SET RESULT OK
+            setResult(Activity.RESULT_OK)
             finish()
             Toast.makeText(this, "Note Saved", Toast.LENGTH_SHORT).show()
         }
