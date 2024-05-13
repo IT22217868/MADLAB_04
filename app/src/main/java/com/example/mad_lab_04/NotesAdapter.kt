@@ -19,6 +19,18 @@ class NotesAdapter(private var notes :List<Note>, context: Context) : RecyclerVi
         val contentTextView:TextView = itemView.findViewById(R.id.contentTextView)
         val updateButton: ImageView = itemView.findViewById(R.id.updateButton)
         val deleteButton: ImageView = itemView.findViewById(R.id.deleteButton)
+
+        //
+        fun bind(note: Note) {
+            // Update your views here
+            itemView.apply {
+                // Set the width and height of the item view
+                layoutParams = layoutParams.apply {
+                    width = resources.getDimensionPixelSize(R.dimen.note_item_width)
+                    height = resources.getDimensionPixelSize(R.dimen.note_item_height)
+                }
+            }
+        }
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): NoteViewHolder {
@@ -46,6 +58,7 @@ class NotesAdapter(private var notes :List<Note>, context: Context) : RecyclerVi
             Toast.makeText(holder.itemView.context, "Note Deleted", Toast.LENGTH_SHORT).show()
         }
     }
+
 
     fun refreshData(newNotes: List<Note>){
         notes = newNotes
